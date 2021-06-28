@@ -1,47 +1,74 @@
 // Código del cuadrado
-function perimeterSquare(ladoSquare) {
+function getPerimeterSquare(ladoSquare) {
     return ladoSquare * 4;
 }
 
-function areaSquare(ladoSquare) {
+function getAreaSquare(ladoSquare) {
     return ladoSquare * ladoSquare;
 }
 
-console.group("Cuadrados");
-console.log("El perímetro del cuadrado mide: " + perimeterSquare(56) + "cm");
-console.log("El área del cuadrado mide: " + areaSquare(56) + "cm^2");
-console.groupEnd();
+// Funciones para mostrar los cáculos del triángulo
+function calculatePerimeterOfSquare() {
+    const sideSquare = document.getElementById('sideSquare').value;
+    alert('El Perímetro del cuadrado es ' + getPerimeterSquare(sideSquare) + 'cm');
+}
+
+function calculateAreaOfSquare() {
+    const sideSquare = document.getElementById('sideSquare').value;
+    alert('El Perímetro del cuadrado es ' + getAreaSquare(sideSquare) + 'cm^2');
+}
 
 // Código del triángulo
-function perimeterTriangle(sideTriangle1, sideTriangle2, baseTriangle) {
-    return sideTriangle1 + sideTriangle2 + baseTriangle;
+function getPerimeterTriangle(sideTriangle1, sideTriangle2, baseTriangle) {
+    return (sideTriangle1 + sideTriangle2) + baseTriangle;
 }
 
-function areaTriangle(baseTriangle, heightTriangle) {
-    return baseTriangle * heightTriangle / 2;
+function getAreaTriangle(baseTriangle, heightTriangle) {
+    return (baseTriangle * heightTriangle) / 2;
 }
 
+// Funciones para mostrar los cáculos del triángulo
+function calculatePerimeterOfTriangle() {
+    const sideTriangle1 = parseInt(document.getElementById('sideTriangle1').value);
+    const sideTriangle2 = parseInt(document.getElementById('sideTriangle2').value);
+    const baseTriangle = parseInt(document.getElementById('baseTriangle').value);
 
-console.group("Triángulos");
-console.log("El perímetro del triángulo es: " + perimeterTriangle(6, 6, 4) + "cm");
-console.log("El área del triángulo es: " + areaTriangle(4, 5.5) + "cm^2");
-console.groupEnd();
+    alert('El Perímetro del triángulo es ' + getPerimeterTriangle(sideTriangle1, sideTriangle2, baseTriangle) + 'cm');
+}
 
-// Código del círculo
-function diameterCircle(radius) {
+function calculateAreaOfTriangle() {
+    const baseTriangle = parseInt(document.getElementById('baseTriangle').value);
+    const heightTriangle = parseInt(document.getElementById('heightTriangle').value);
+
+    alert('El área del triángulo es ' + getAreaTriangle(baseTriangle, heightTriangle) + 'cm^2');
+}
+
+// Funciones para hacer cáculos del círculo
+function getDiameterCircle(radius) {
     return radius * 2;
 }
 
-function perimeterCircle(radius) {
-    return diameterCircle(radius) * Math.PI;
+function getPerimeterCircle(radius) {
+    return getDiameterCircle(radius) * Math.PI;
 }
 
-function areaCircle(radius) {
+function getAreaCircle(radius) {
     return (radius * radius) * Math.PI;
 }
 
-console.group("Círculos");
-console.log("El diámetro del círculo es: " + diameterCircle(5) + "cm");
-console.log("El perímetro del círculo es: " + perimeterCircle(5) + "cm");
-console.log("El área del círculo es: " + areaCircle(5) + "cm");
-console.groupEnd();
+// Funciones para mostrar los cáculos del círculo
+function calculateDiameterOfCircle() {
+    const radiusCircle = parseInt(document.getElementById('radiusCircle').value);
+    alert('El diámetro del círculo es ' + getDiameterCircle(radiusCircle) + 'cm');
+}
+
+function calculatePerimeterOfCircle() {
+    const radiusCircle = parseInt(document.getElementById('radiusCircle').value);
+    alert('El Perímetro del círculo es ' + getPerimeterCircle(radiusCircle) + 'cm');
+}
+
+function calculateAreaOfCircle() {
+    const radiusCircle = parseInt(document.getElementById('radiusCircle').value);
+    alert('El Perímetro del círculo es ' + getAreaCircle(radiusCircle) + 'cm^2');
+
+}
