@@ -5,7 +5,6 @@ function calculateDiscount() {
     const priceWithDiscount = getPriceWithDiscount(price, discount);
 
     document.getElementById('priceWithDiscount').innerText = "El precio con descuento es " + priceWithDiscount;
-
 }
 
 function getPriceWithDiscount(price, discount) {
